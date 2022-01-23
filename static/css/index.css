@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.round{
+    border-radius:25px;
+    transition:all 1s ease;
+}
+.card-hover:hover{
+    background: linear-gradient(360deg, rgba(75,51,190,1) 60%, rgba(147,93,232,1) 89%);
+    color: white;
+    animation-name: card-hover-animation;animation-duration:1s;
+    cursor: pointer;
+}
+hr.hr-dash{
+    border: 1px dashed gray;
+}
+.btop{
+    margin-top:-20px;
+}
+.btn-bg{
+    background: #212121;
+}
+.card-style{
+    width: 18rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mtop{
+    padding:150px 0px 200px 0px;
+}

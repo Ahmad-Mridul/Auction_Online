@@ -1,0 +1,384 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock  %}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+</head>
+<body>
+    
+{% block index %}
+
+{% comment %} categories section {% endcomment %}
+
+    <div class="container" style="margin-top:-100px">
+        <h4 class='text-white'>Browse the highlights</h4>
+        <div class="row">
+            <div class="col ">
+                <div class="card round shadow p-3 card-hover" style="width: 10rem;">
+                    <img src="{%static 'img/categories/02.png'%}" alt="" height='150px'>
+                    <div class="card-body">
+                    <p class="card-text text-center">Jewllery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col"><div class="card round shadow p-3 card-hover" style="width: 10rem;">
+                <img src="{%static 'img/categories/03.png'%}" alt="" height='150px'>
+                <div class="card-body">
+                <p class="card-text text-center">Watces</p>
+                </div>
+            </div></div>
+            <div class="col"><div class="card round shadow p-3 card-hover" style="width: 10rem;">
+                <img src="{%static 'img/categories/04.png'%}" alt="" height='150px'>
+                <div class="card-body">
+                <p class="card-text text-center">Electronics</p>
+                </div>
+            </div></div>
+            <div class="col"><div class="card round shadow p-3 card-hover" style="width: 10rem;">
+                <img src="{%static 'img/categories/05.png'%}" alt="" height='150px'>
+                <div class="card-body">
+                <p class="card-text text-center">Sports</p>
+                </div>
+            </div></div>
+            <div class="col"><div class="card round shadow p-3 card-hover" style="width: 10rem;">
+                <img src="{%static 'img/categories/06.png'%}" alt="" height='150px'>
+                <div class="card-body">
+                <p class="card-text text-center">Real States</p>
+                </div>
+            </div></div>
+            <div class="col"><div class="card round shadow p-3 card-hover" style="width: 10rem;">
+                <img src="{%static 'img/categories/01.png'%}" alt="" height='150px'>
+                <div class="card-body">
+                <p class="card-text text-center">Vehicles</p>
+                </div>
+            </div></div>
+        </div>
+    </div>
+    <br><br><br>
+
+{% comment %} Vehicles section {% endcomment %}
+<div class='container d-flex'>
+    <div>
+        <img src="{%static 'img/categories/01.png'%}" alt="">
+    </div>
+    <div class='ms-4'>
+        <h1>Vehicles</h1>
+        <p>We offer affordable Vehicles</p>
+    </div>
+</div>
+<div class="mt-5" style="background-image: url({%static 'img/categories/car-bg.png'%});height:600px">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card rounded p-2 box-shadow card-style" >
+                    <img src="{%static 'img/car-auction/auction-1.jpg'%}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">2018 Hyundai</h5>
+                        <hr class="hr-dash">
+                        <div class="row">
+                            <div class="col-6"style="border-right: 1px solid gray">
+                                <div class='d-flex'>
+                                    <div><i class="fas fa-gavel text-success"></i></div>
+                                    <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class='d-flex'>
+                                    <div><i class="fas fa-wallet text-danger"></i></div>
+                                    <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="hr-dash">
+                    </div>
+                    <button class="btn btn-primary btop text-white">Bid Now</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded p-2 card-style" >
+                    <img src="{%static 'img/car-auction/auction-1.jpg'%}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">2018 Hyundai</h5>
+                        <hr class="hr-dash">
+                        <div class="row">
+                            <div class="col-6"style="border-right: 1px solid gray">
+                                <div class='d-flex'>
+                                    <div><i class="fas fa-gavel text-success"></i></div>
+                                    <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class='d-flex'>
+                                    <div><i class="fas fa-wallet text-danger"></i></div>
+                                    <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="hr-dash">
+                    </div>
+                    <button class="btn btn-primary btop text-white">Bid Now</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded p-2 card-style">
+                    <img src="{%static 'img/car-auction/auction-1.jpg'%}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">2018 Hyundai</h5>
+                        <hr class="hr-dash">
+                        <div class="row">
+                            <div class="col-6"style="border-right: 1px solid gray">
+                                <div class='d-flex'>
+                                    <div><i class="fas fa-gavel text-success"></i></div>
+                                    <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class='d-flex'>
+                                    <div><i class="fas fa-wallet text-danger"></i></div>
+                                    <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="hr-dash">
+                    </div>
+                    <button class="btn btn-primary btop  text-white">Bid Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <br><br><br>
+
+    {% comment %} jewelry section{% endcomment %}
+    <div class='container d-flex'>
+        <div>
+            <img src="{%static 'img/categories/02.png'%}" alt="">
+        </div>
+        <div class='ms-4'>
+            <h1>Jewelry</h1>
+            <p>Online jewelry auctions where you can bid now and save money</p>
+        </div>
+    </div>
+    <div class="mt-5" style="background-image: url({%static 'img/jewelry/jwelry-bg.png'%});height:600px">
+        
+        <br> 
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card rounded p-2 card-style">
+                        <img src="{%static 'img/jewelry/auction-1.jpg'%}" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">2018 Hyundai</h5>
+                            <hr class="hr-dash">
+                            <div class="row">
+                                <div class="col-6"style="border-right: 1px solid gray">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-gavel text-success"></i></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-wallet text-danger"></i></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr-dash">
+                        </div>
+                        <button class="btn btn-primary btop text-white">Bid Now</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card rounded p-2 card-style">
+                        <img src="{%static 'img/jewelry/auction-2.jpg'%}" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">2018 Hyundai</h5>
+                            <hr class="hr-dash">
+                            <div class="row">
+                                <div class="col-6"style="border-right: 1px solid gray">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-gavel text-success"></i></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-wallet text-danger"></i></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr-dash">
+                        </div>
+                        <button class="btn btn-primary btop text-white">Bid Now</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card rounded p-2 card-style">
+                        <img src="{%static 'img/jewelry/auction-3.jpg'%}" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">2018 Hyundai</h5>
+                            <hr class="hr-dash">
+                            <div class="row">
+                                <div class="col-6"style="border-right: 1px solid gray">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-gavel text-success"></i></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-wallet text-danger"></i></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr-dash">
+                        </div>
+                        <button class="btn btn-primary btop  text-white">Bid Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% comment %} register section {% endcomment %}
+    <div class="container" style="background-image: url({% static 'img/callin/call-bg.png'%});background-repeat: no-repeat;padding: 90px;">
+        <div class="row pad">
+            <div class="col-8 d-flex justify-content-center align-items-center">
+               <div>
+                <h1 class="text-white">Register For Free & <br> Start Bidding Now!</h1>
+                <p class="text-white">From cars to diamonds to iPhones, we have it all.</p>
+               </div>
+            </div>
+            <div class="col-4 d-flex justify-content-center align-items-center">
+                <button class="btn btn-light round" style="width:150px">
+                    Register
+                </button>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+
+    {% comment %} watch section {% endcomment %}
+    <div class='container d-flex'>
+        <div>
+            <img src="{%static 'img/categories/03.png'%}" alt="">
+        </div>
+        <div class='ms-4'>
+            <h1>Watches</h1>
+            <p>Shop for men & women designer brand watches</p>
+        </div>
+    </div>
+    <div class="mt-5">
+        
+        <br> 
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card rounded p-2 card-style">
+                        <img src="{%static 'img/watches/auction-1.jpg'%}" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">2018 Hyundai</h5>
+                            <hr class="hr-dash">
+                            <div class="row">
+                                <div class="col-6"style="border-right: 1px solid gray">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-gavel text-success"></i></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-wallet text-danger"></i></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr-dash">
+                        </div>
+                        <button class="btn btn-primary btop text-white">Bid Now</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card rounded p-2 card-style">
+                        <img src="{%static 'img/watches/auction-2.jpg'%}" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">2018 Hyundai</h5>
+                            <hr class="hr-dash">
+                            <div class="row">
+                                <div class="col-6"style="border-right: 1px solid gray">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-gavel text-success"></i></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-wallet text-danger"></i></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr-dash">
+                        </div>
+                        <button class="btn btn-primary btop text-white">Bid Now</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card rounded p-2 card-style">
+                        <img src="{%static 'img/watches/auction-3.jpg'%}" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">2018 Hyundai</h5>
+                            <hr class="hr-dash">
+                            <div class="row">
+                                <div class="col-6"style="border-right: 1px solid gray">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-gavel text-success"></i></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-wallet text-danger"></i></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr-dash">
+                        </div>
+                        <button class="btn btn-primary btop  text-white">Bid Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    
+    {% comment %} popular auctions {% endcomment %}
+    <div style="background-image: url({%static 'img/popular/popular-bg.png'%})">
+        <div class="text-center text-white mtop">
+            <h6>Closing Within 24 Hours</h6>
+            <h1>Popular Auctions</h1>
+            <p>Bid and win great deals,Our auction process is simple, efficient, and transparent.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                asdhas
+            </div>
+            <div class="col">
+                asjdhkjasdh
+            </div>
+        </div>
+    </div>
+{% endblock  %}
+</body>
+</html>
