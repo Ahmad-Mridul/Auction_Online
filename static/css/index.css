@@ -32,6 +32,19 @@ hr.hr-dash{
 .margintop{
     margin-top:-200px;
 }
+
 .drop-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.rounds{
+    border-radius:50px;
+}
+.rounds-test{
+    border-radius:15px;
+}
+.bghow{
+    background-color:#F1F3FD;
+}
+.box-shadow{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
