@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-onz(ya$^c4mp86f)qdir&bj)#!5i(dqy(=-=yb++dwp_)re(-5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['auction-crm1.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['auctionlivebd.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
