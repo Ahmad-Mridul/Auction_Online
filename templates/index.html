@@ -6,185 +6,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Home{% endblock  %}</title>
-    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
-    
+
 {% block index %}
 
-{% comment %} categories section {% endcomment %}
+    {% comment %} categories section {% endcomment %}
 
     <div class="container" style="margin-top:-100px">
         <h4 class='text-white'>Browse the highlights</h4>
         <div class="row">
+            {% for n in categorys %}
             <div class="col ">
                 <div class="card round shadow p-3 card-hover" style="width: 10rem;">
-                    <img src="{%static 'img/categories/02.png'%}" alt="" height='150px'>
+                    <img src="{{n.cat_img.url}}" alt="" height='150px'>
                     <div class="card-body">
-                    <p class="card-text text-center">Jewllery</p>
+                        <p class="card-text text-center">{{ n.cat_Name }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col"><div class="card round shadow p-3 card-hover" style="width: 10rem;">
-                <img src="{%static 'img/categories/03.png'%}" alt="" height='150px'>
-                <div class="card-body">
-                <p class="card-text text-center">Watces</p>
-                </div>
-            </div></div>
-            <div class="col"><div class="card round shadow p-3 card-hover" style="width: 10rem;">
-                <img src="{%static 'img/categories/04.png'%}" alt="" height='150px'>
-                <div class="card-body">
-                <p class="card-text text-center">Electronics</p>
-                </div>
-            </div></div>
-            <div class="col"><div class="card round shadow p-3 card-hover" style="width: 10rem;">
-                <img src="{%static 'img/categories/05.png'%}" alt="" height='150px'>
-                <div class="card-body">
-                <p class="card-text text-center">Sports</p>
-                </div>
-            </div></div>
-            <div class="col"><div class="card round shadow p-3 card-hover" style="width: 10rem;">
-                <img src="{%static 'img/categories/06.png'%}" alt="" height='150px'>
-                <div class="card-body">
-                <p class="card-text text-center">Real States</p>
-                </div>
-            </div></div>
-            <div class="col"><div class="card round shadow p-3 card-hover" style="width: 10rem;">
-                <img src="{%static 'img/categories/01.png'%}" alt="" height='150px'>
-                <div class="card-body">
-                <p class="card-text text-center">Vehicles</p>
-                </div>
-            </div></div>
-        </div>
-    </div>
-    <br><br><br>
+            {% endfor %}
 
-{% comment %} Vehicles section {% endcomment %}
-<div class='container d-flex'>
-    <div>
-        <img src="{%static 'img/categories/01.png'%}" alt="">
-    </div>
-    <div class='ms-4'>
-        <h1>Vehicles</h1>
-        <p>We offer affordable Vehicles</p>
-    </div>
-</div>
-<div class="mt-5" style="background-image: url({%static 'img/categories/car-bg.png'%});height:600px">
-    
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="card rounded p-2 box-shadow card-style" >
-                    <img src="{%static 'img/car-auction/auction-1.jpg'%}" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">2018 Hyundai</h5>
-                        <hr class="hr-dash">
-                        <div class="row">
-                            <div class="col-6"style="border-right: 1px solid gray">
-                                <div class='d-flex'>
-                                    <div><i class="fas fa-gavel text-success"></i></div>
-                                    <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class='d-flex'>
-                                    <div><i class="fas fa-wallet text-danger"></i></div>
-                                    <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="hr-dash">
-                    </div>
-                    <button class="btn btn-primary btop text-white">Bid Now</button>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card rounded p-2 card-style" >
-                    <img src="{%static 'img/car-auction/auction-1.jpg'%}" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">2018 Hyundai</h5>
-                        <hr class="hr-dash">
-                        <div class="row">
-                            <div class="col-6"style="border-right: 1px solid gray">
-                                <div class='d-flex'>
-                                    <div><i class="fas fa-gavel text-success"></i></div>
-                                    <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class='d-flex'>
-                                    <div><i class="fas fa-wallet text-danger"></i></div>
-                                    <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="hr-dash">
-                    </div>
-                    <button class="btn btn-primary btop text-white">Bid Now</button>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card rounded p-2 card-style">
-                    <img src="{%static 'img/car-auction/auction-1.jpg'%}" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">2018 Hyundai</h5>
-                        <hr class="hr-dash">
-                        <div class="row">
-                            <div class="col-6"style="border-right: 1px solid gray">
-                                <div class='d-flex'>
-                                    <div><i class="fas fa-gavel text-success"></i></div>
-                                    <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class='d-flex'>
-                                    <div><i class="fas fa-wallet text-danger"></i></div>
-                                    <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="hr-dash">
-                    </div>
-                    <button class="btn btn-primary btop  text-white">Bid Now</button>
-                </div>
-            </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    {% comment %} Vehicles section {% endcomment %}
+    <div class='container d-flex'>
+        <div>
+            <img src="{% static 'img/categories/01.png' %}" alt="">
+        </div>
+        <div class='ms-4'>
+            <h1>Vehicles</h1>
+            <p>We offer affordable Vehicles</p>
         </div>
     </div>
-</div> <br><br><br>
+    <div class="mt-5" style="background-image: url({% static 'img/categories/car-bg.png' %});height:600px">
+
+    <div class="container">
+    <div class="row">
+        <div class="col">
+
+            {% if Product.category == Vehicles %}
+                {% for n in Product %}
+                    <div class="card rounded p-2 box-shadow card-style">
+                        <img src="{{ n.p_img.url }}" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ n.p_name }}</h5>
+                            <hr class="hr-dash">
+                            <div class="row">
+                                <div class="col-6" style="border-right: 1px solid gray">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-gavel text-success"></i></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                        </p></div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class='d-flex'>
+                                        <div><i class="fas fa-wallet text-danger"></i></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span
+                                                class="text-black">{{ n.p_price }} &#2547</span></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="hr-dash">
+                        </div>
+                        <button class="btn btn-primary btop text-white">Bid Now</button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+        </div>
+
+
+    </div> <br><br><br>
 
     {% comment %} jewelry section{% endcomment %}
     <div class='container d-flex'>
         <div>
-            <img src="{%static 'img/categories/02.png'%}" alt="">
+            <img src="{% static 'img/categories/02.png' %}" alt="">
         </div>
         <div class='ms-4'>
             <h1>Jewelry</h1>
             <p>Online jewelry auctions where you can bid now and save money</p>
         </div>
     </div>
-    <div class="mt-5" style="background-image: url({%static 'img/jewelry/jwelry-bg.png'%});height:600px">
-        
-        <br> 
+    <div class="mt-5" style="background-image: url({% static 'img/jewelry/jwelry-bg.png' %});height:600px">
+
+        <br>
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="card rounded p-2 card-style">
-                        <img src="{%static 'img/jewelry/auction-1.jpg'%}" alt="">
+                        <img src="{% static 'img/jewelry/auction-1.jpg' %}" alt="">
                         <div class="card-body">
                             <h5 class="card-title">2018 Hyundai</h5>
                             <hr class="hr-dash">
                             <div class="row">
-                                <div class="col-6"style="border-right: 1px solid gray">
+                                <div class="col-6" style="border-right: 1px solid gray">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-gavel text-success"></i></div>
-                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-wallet text-danger"></i></div>
-                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                             </div>
@@ -195,21 +127,23 @@
                 </div>
                 <div class="col">
                     <div class="card rounded p-2 card-style">
-                        <img src="{%static 'img/jewelry/auction-2.jpg'%}" alt="">
+                        <img src="{% static 'img/jewelry/auction-2.jpg' %}" alt="">
                         <div class="card-body">
                             <h5 class="card-title">2018 Hyundai</h5>
                             <hr class="hr-dash">
                             <div class="row">
-                                <div class="col-6"style="border-right: 1px solid gray">
+                                <div class="col-6" style="border-right: 1px solid gray">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-gavel text-success"></i></div>
-                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-wallet text-danger"></i></div>
-                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                             </div>
@@ -220,21 +154,23 @@
                 </div>
                 <div class="col">
                     <div class="card rounded p-2 card-style">
-                        <img src="{%static 'img/jewelry/auction-3.jpg'%}" alt="">
+                        <img src="{% static 'img/jewelry/auction-3.jpg' %}" alt="">
                         <div class="card-body">
                             <h5 class="card-title">2018 Hyundai</h5>
                             <hr class="hr-dash">
                             <div class="row">
-                                <div class="col-6"style="border-right: 1px solid gray">
+                                <div class="col-6" style="border-right: 1px solid gray">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-gavel text-success"></i></div>
-                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-wallet text-danger"></i></div>
-                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                             </div>
@@ -248,13 +184,14 @@
     </div>
 
     {% comment %} register section {% endcomment %}
-    <div class="container" style="background-image: url({% static 'img/callin/call-bg.png'%});background-repeat: no-repeat;padding: 90px;">
+    <div class="container"
+         style="background-image: url({% static 'img/callin/call-bg.png' %});background-repeat: no-repeat;padding: 90px;">
         <div class="row pad">
             <div class="col-8 d-flex justify-content-center align-items-center">
-               <div>
-                <h1 class="text-white">Register For Free & <br> Start Bidding Now!</h1>
-                <p class="text-white">From cars to diamonds to iPhones, we have it all.</p>
-               </div>
+                <div>
+                    <h1 class="text-white">Register For Free & <br> Start Bidding Now!</h1>
+                    <p class="text-white">From cars to diamonds to iPhones, we have it all.</p>
+                </div>
             </div>
             <div class="col-4 d-flex justify-content-center align-items-center">
                 <button class="btn btn-light round" style="width:150px">
@@ -269,7 +206,7 @@
     {% comment %} watch section {% endcomment %}
     <div class='container d-flex'>
         <div>
-            <img src="{%static 'img/categories/03.png'%}" alt="">
+            <img src="{% static 'img/categories/03.png' %}" alt="">
         </div>
         <div class='ms-4'>
             <h1>Watches</h1>
@@ -277,27 +214,29 @@
         </div>
     </div>
     <div class="mt-5">
-        
-        <br> 
+
+        <br>
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="card rounded p-2 card-style">
-                        <img src="{%static 'img/watches/auction-1.jpg'%}" alt="">
+                        <img src="{% static 'img/watches/auction-1.jpg' %}" alt="">
                         <div class="card-body">
                             <h5 class="card-title">2018 Hyundai</h5>
                             <hr class="hr-dash">
                             <div class="row">
-                                <div class="col-6"style="border-right: 1px solid gray">
+                                <div class="col-6" style="border-right: 1px solid gray">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-gavel text-success"></i></div>
-                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-wallet text-danger"></i></div>
-                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                             </div>
@@ -308,21 +247,23 @@
                 </div>
                 <div class="col">
                     <div class="card rounded p-2 card-style">
-                        <img src="{%static 'img/watches/auction-2.jpg'%}" alt="">
+                        <img src="{% static 'img/watches/auction-2.jpg' %}" alt="">
                         <div class="card-body">
                             <h5 class="card-title">2018 Hyundai</h5>
                             <hr class="hr-dash">
                             <div class="row">
-                                <div class="col-6"style="border-right: 1px solid gray">
+                                <div class="col-6" style="border-right: 1px solid gray">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-gavel text-success"></i></div>
-                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-wallet text-danger"></i></div>
-                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                             </div>
@@ -333,21 +274,23 @@
                 </div>
                 <div class="col">
                     <div class="card rounded p-2 card-style">
-                        <img src="{%static 'img/watches/auction-3.jpg'%}" alt="">
+                        <img src="{% static 'img/watches/auction-3.jpg' %}" alt="">
                         <div class="card-body">
                             <h5 class="card-title">2018 Hyundai</h5>
                             <hr class="hr-dash">
                             <div class="row">
-                                <div class="col-6"style="border-right: 1px solid gray">
+                                <div class="col-6" style="border-right: 1px solid gray">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-gavel text-success"></i></div>
-                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-wallet text-danger"></i></div>
-                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                             </div>
@@ -360,46 +303,49 @@
         </div>
     </div>
     <br><br><br>
-    
+
     {% comment %} popular auctions {% endcomment %}
-    <div style="background-image: url({%static 'img/popular/popular-bg.png'%})">
+    <div style="background-image: url({% static 'img/popular/popular-bg.png' %})">
         <div class="text-center text-white mtop">
             <h6>Closing Within 24 Hours</h6>
             <h1>Popular Auctions</h1>
             <p>Bid and win great deals,Our auction process is simple, efficient, and transparent.</p>
         </div>
     </div>
-    <div class="container p-5" style="margin-top:-200px;background:white;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="container p-5"
+         style="margin-top:-200px;background:white;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
         <div class="row">
             <div class="col">
                 <div class="row">
                     <div class="col-6">
-                        <img src="{%static 'img/watches/auction-3.jpg'%}" height="75%" alt="">
+                        <img src="{% static 'img/watches/auction-3.jpg' %}" height="75%" alt="">
                     </div>
                     <div class="col-6 text-center ">
                         <h5 class="card-title">2018 Hyundai</h5>
                         <hr class="hr-dash">
                         <div class='d-flex text-center'>
                             <div><i class="text-center fas fa-gavel text-success"></i></div>
-                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                            </p></div>
                         </div>
-                            <hr class="hr-dash">
+                        <hr class="hr-dash">
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="row">
                     <div class="col-6">
-                        <img src="{%static 'img/watches/auction-3.jpg'%}" height="200px" alt="">
+                        <img src="{% static 'img/watches/auction-3.jpg' %}" height="200px" alt="">
                     </div>
                     <div class="col-6 text-center ">
                         <h5 class="card-title">2018 Hyundai</h5>
                         <hr class="hr-dash">
                         <div class='d-flex text-center'>
                             <div><i class="text-center fas fa-gavel text-success"></i></div>
-                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                            </p></div>
                         </div>
-                            <hr class="hr-dash">
+                        <hr class="hr-dash">
                     </div>
                 </div>
             </div>
@@ -408,32 +354,34 @@
             <div class="col">
                 <div class="row">
                     <div class="col-6">
-                        <img src="{%static 'img/watches/auction-3.jpg'%}" height="75%" alt="">
+                        <img src="{% static 'img/watches/auction-3.jpg' %}" height="75%" alt="">
                     </div>
                     <div class="col-6 text-center ">
                         <h5 class="card-title">2018 Hyundai</h5>
                         <hr class="hr-dash">
                         <div class='d-flex text-center'>
                             <div><i class="text-center fas fa-gavel text-success"></i></div>
-                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                            </p></div>
                         </div>
-                            <hr class="hr-dash">
+                        <hr class="hr-dash">
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="row">
                     <div class="col-6">
-                        <img src="{%static 'img/watches/auction-3.jpg'%}" height="200px" alt="">
+                        <img src="{% static 'img/watches/auction-3.jpg' %}" height="200px" alt="">
                     </div>
                     <div class="col-6 text-center ">
                         <h5 class="card-title">2018 Hyundai</h5>
                         <hr class="hr-dash">
                         <div class='d-flex text-center'>
                             <div><i class="text-center fas fa-gavel text-success"></i></div>
-                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                            </p></div>
                         </div>
-                            <hr class="hr-dash">
+                        <hr class="hr-dash">
                     </div>
                 </div>
             </div>
@@ -442,32 +390,34 @@
             <div class="col">
                 <div class="row">
                     <div class="col-6">
-                        <img src="{%static 'img/watches/auction-3.jpg'%}" height="75%" alt="">
+                        <img src="{% static 'img/watches/auction-3.jpg' %}" height="75%" alt="">
                     </div>
                     <div class="col-6 text-center ">
                         <h5 class="card-title">2018 Hyundai</h5>
                         <hr class="hr-dash">
                         <div class='d-flex text-center'>
                             <div><i class="text-center fas fa-gavel text-success"></i></div>
-                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                            </p></div>
                         </div>
-                            <hr class="hr-dash">
+                        <hr class="hr-dash">
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="row">
                     <div class="col-6">
-                        <img src="{%static 'img/watches/auction-3.jpg'%}" height="200px" alt="">
+                        <img src="{% static 'img/watches/auction-3.jpg' %}" height="200px" alt="">
                     </div>
                     <div class="col-6 text-center ">
                         <h5 class="card-title">2018 Hyundai</h5>
                         <hr class="hr-dash">
                         <div class='d-flex text-center'>
                             <div><i class="text-center fas fa-gavel text-success"></i></div>
-                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                            <div><p class='text-center text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                            </p></div>
                         </div>
-                            <hr class="hr-dash">
+                        <hr class="hr-dash">
                     </div>
                 </div>
             </div>
@@ -476,35 +426,38 @@
     {% comment %} coins section {% endcomment %}
     <div class='container d-flex'>
         <div>
-            <img src="{%static 'img/coin/coin-1.png'%}" alt="">
+            <img src="{% static 'img/coin/coin-1.png' %}" alt="">
         </div>
         <div class='ms-4'>
             <h1>Coins & Bullion</h1>
             <p>Online jewelry auctions where you can bid now and save money</p>
         </div>
     </div>
-    <div class="mt-5" style="background-image: url({%static 'img/coin/coin-bg.png'%});height:600px;background-repeat: no-repeat;background-size: cover">
-        
-        <br> 
+    <div class="mt-5"
+         style="background-image: url({% static 'img/coin/coin-bg.png' %});height:600px;background-repeat: no-repeat;background-size: cover">
+
+        <br>
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="card rounded p-2 card-style">
-                        <img src="{%static 'img/coin/auction-1.jpg'%}" alt="">
+                        <img src="{% static 'img/coin/auction-1.jpg' %}" alt="">
                         <div class="card-body">
                             <h5 class="card-title">2018 Hyundai</h5>
                             <hr class="hr-dash">
                             <div class="row">
-                                <div class="col-6"style="border-right: 1px solid gray">
+                                <div class="col-6" style="border-right: 1px solid gray">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-gavel text-success"></i></div>
-                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-wallet text-danger"></i></div>
-                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                             </div>
@@ -515,21 +468,23 @@
                 </div>
                 <div class="col">
                     <div class="card rounded p-2 card-style">
-                        <img src="{%static 'img/coin/auction-2.jpg'%}" alt="">
+                        <img src="{% static 'img/coin/auction-2.jpg' %}" alt="">
                         <div class="card-body">
                             <h5 class="card-title">2018 Hyundai</h5>
                             <hr class="hr-dash">
                             <div class="row">
-                                <div class="col-6"style="border-right: 1px solid gray">
+                                <div class="col-6" style="border-right: 1px solid gray">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-gavel text-success"></i></div>
-                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-wallet text-danger"></i></div>
-                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                             </div>
@@ -540,21 +495,23 @@
                 </div>
                 <div class="col">
                     <div class="card rounded p-2 card-style">
-                        <img src="{%static 'img/coin/auction-3.jpg'%}" alt="">
+                        <img src="{% static 'img/coin/auction-3.jpg' %}" alt="">
                         <div class="card-body">
                             <h5 class="card-title">2018 Hyundai</h5>
                             <hr class="hr-dash">
                             <div class="row">
-                                <div class="col-6"style="border-right: 1px solid gray">
+                                <div class="col-6" style="border-right: 1px solid gray">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-gavel text-success"></i></div>
-                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                        <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class='d-flex'>
                                         <div><i class="fas fa-wallet text-danger"></i></div>
-                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                        <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span>
+                                        </p></div>
                                     </div>
                                 </div>
                             </div>
@@ -570,16 +527,17 @@
     {% comment %} Real Estate {% endcomment %}
     <div class='container d-flex'>
         <div>
-            <img src="{%static 'img/categories/06.png'%}" alt="">
+            <img src="{% static 'img/categories/06.png' %}" alt="">
         </div>
         <div class='ms-4'>
             <h1>Real Estate</h1>
             <p>Find auctions for Homes, Condos, Residential & Commercial Properties.</p>
         </div>
     </div>
-    <div class="mt-5" style="background-image: url({%static 'img/estate/real-bg.png'%});height:600px;background-repeat: no-repeat;background-size: cover">
-        
-        <br> 
+    <div class="mt-5"
+         style="background-image: url({% static 'img/estate/real-bg.png' %});height:600px;background-repeat: no-repeat;background-size: cover">
+
+        <br>
         <div class="container">
             <div class="row">
                 <div class="col-5 d-flex justify-content-center align-items-center">
@@ -587,16 +545,18 @@
                         <h2>Brand New Appartments</h2>
                         <hr class="hr-dash">
                         <div class="row">
-                            <div class="col-6"style="border-right: 1px solid gray">
+                            <div class="col-6" style="border-right: 1px solid gray">
                                 <div class='d-flex'>
                                     <div><i class="fas fa-gavel text-success"></i></div>
-                                    <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                    <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                    </p></div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class='d-flex'>
                                     <div><i class="fas fa-wallet text-danger"></i></div>
-                                    <div><p class='text-danger ms-2'>Buy Now <br> <span class="text-black">100k &#2547</span></p></div>
+                                    <div><p class='text-danger ms-2'>Buy Now <br> <span
+                                            class="text-black">100k &#2547</span></p></div>
                                 </div>
                             </div>
                             <hr class="hr-dash">
@@ -605,7 +565,7 @@
                     </div>
                 </div>
                 <div class="col-7">
-                    <img src="{%static 'img/estate/auction-1.png'%}" alt="">
+                    <img src="{% static 'img/estate/auction-1.png' %}" alt="">
                 </div>
             </div>
         </div>
@@ -617,17 +577,17 @@
             <div class="col-6">
                 <div class='container d-flex'>
                     <div>
-                        <img src="{%static 'img/categories/04.png'%}" alt="">
+                        <img src="{% static 'img/categories/04.png' %}" alt="">
                     </div>
                     <div class='ms-4'>
                         <h1>Electronics</h1>
                     </div>
                 </div>
                 <div class="container mt-4">
-                    <div class="card p-2 mb-4"style="width: 30rem;">
+                    <div class="card p-2 mb-4" style="width: 30rem;">
                         <div class="d-flex">
                             <div>
-                                <img src="{%static 'img/coin/auction-3.jpg'%}" height="150px" alt="">
+                                <img src="{% static 'img/coin/auction-3.jpg' %}" height="150px" alt="">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">2018 Hyundai</h5>
@@ -636,7 +596,8 @@
                                     <div class="col">
                                         <div class='d-flex'>
                                             <div><i class="fas fa-gavel text-success"></i></div>
-                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                            </p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -644,10 +605,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card  p-2 mb-4"style="width: 30rem;">
+                    <div class="card  p-2 mb-4" style="width: 30rem;">
                         <div class="d-flex">
                             <div>
-                                <img src="{%static 'img/coin/auction-3.jpg'%}" height="150px" alt="">
+                                <img src="{% static 'img/coin/auction-3.jpg' %}" height="150px" alt="">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">2018 Hyundai</h5>
@@ -656,7 +617,8 @@
                                     <div class="col">
                                         <div class='d-flex'>
                                             <div><i class="fas fa-gavel text-success"></i></div>
-                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                            </p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -664,10 +626,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card p-2 mb-4"style="width: 30rem;">
+                    <div class="card p-2 mb-4" style="width: 30rem;">
                         <div class="d-flex">
                             <div>
-                                <img src="{%static 'img/coin/auction-3.jpg'%}" height="150px" alt="">
+                                <img src="{% static 'img/coin/auction-3.jpg' %}" height="150px" alt="">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">2018 Hyundai</h5>
@@ -676,7 +638,8 @@
                                     <div class="col">
                                         <div class='d-flex'>
                                             <div><i class="fas fa-gavel text-success"></i></div>
-                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                            </p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -684,10 +647,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card p-2 mb-4"style="width: 30rem;">
+                    <div class="card p-2 mb-4" style="width: 30rem;">
                         <div class="d-flex">
                             <div>
-                                <img src="{%static 'img/coin/auction-3.jpg'%}" height="150px" alt="">
+                                <img src="{% static 'img/coin/auction-3.jpg' %}" height="150px" alt="">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">2018 Hyundai</h5>
@@ -696,7 +659,8 @@
                                     <div class="col">
                                         <div class='d-flex'>
                                             <div><i class="fas fa-gavel text-success"></i></div>
-                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                            </p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -709,17 +673,17 @@
             <div class="col-6">
                 <div class='container d-flex'>
                     <div>
-                        <img src="{%static 'img/categories/04.png'%}" alt="">
+                        <img src="{% static 'img/categories/04.png' %}" alt="">
                     </div>
                     <div class='ms-4'>
                         <h1>Electronics</h1>
                     </div>
                 </div>
                 <div class="container mt-4">
-                    <div class="card p-2 mb-4"style="width: 30rem;">
+                    <div class="card p-2 mb-4" style="width: 30rem;">
                         <div class="d-flex">
                             <div>
-                                <img src="{%static 'img/coin/auction-3.jpg'%}" height="150px" alt="">
+                                <img src="{% static 'img/coin/auction-3.jpg' %}" height="150px" alt="">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">2018 Hyundai</h5>
@@ -728,7 +692,8 @@
                                     <div class="col">
                                         <div class='d-flex'>
                                             <div><i class="fas fa-gavel text-success"></i></div>
-                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                            </p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -736,10 +701,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card p-2 mb-4"style="width: 30rem;">
+                    <div class="card p-2 mb-4" style="width: 30rem;">
                         <div class="d-flex">
                             <div>
-                                <img src="{%static 'img/coin/auction-3.jpg'%}" height="150px" alt="">
+                                <img src="{% static 'img/coin/auction-3.jpg' %}" height="150px" alt="">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">2018 Hyundai</h5>
@@ -748,7 +713,8 @@
                                     <div class="col">
                                         <div class='d-flex'>
                                             <div><i class="fas fa-gavel text-success"></i></div>
-                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                            </p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -756,10 +722,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card p-2 mb-4"style="width: 30rem;">
+                    <div class="card p-2 mb-4" style="width: 30rem;">
                         <div class="d-flex">
                             <div>
-                                <img src="{%static 'img/coin/auction-3.jpg'%}" height="150px" alt="">
+                                <img src="{% static 'img/coin/auction-3.jpg' %}" height="150px" alt="">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">2018 Hyundai</h5>
@@ -768,7 +734,8 @@
                                     <div class="col">
                                         <div class='d-flex'>
                                             <div><i class="fas fa-gavel text-success"></i></div>
-                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                            </p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -776,10 +743,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card p-2 mb-4"style="width: 30rem;">
+                    <div class="card p-2 mb-4" style="width: 30rem;">
                         <div class="d-flex">
                             <div>
-                                <img src="{%static 'img/coin/auction-3.jpg'%}" height="150px" alt="">
+                                <img src="{% static 'img/coin/auction-3.jpg' %}" height="150px" alt="">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">2018 Hyundai</h5>
@@ -788,7 +755,8 @@
                                     <div class="col">
                                         <div class='d-flex'>
                                             <div><i class="fas fa-gavel text-success"></i></div>
-                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span></p></div>
+                                            <div><p class='text-success ms-2'>Current Bid <br> <span class="text-black">99k &#2547</span>
+                                            </p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -796,7 +764,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -807,17 +775,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col text-center">
-                        <img src="{%static 'img/how/how1.png'%}" alt="">
+                        <img src="{% static 'img/how/how1.png' %}" alt="">
                         <h1>Sign Up</h1>
                         <p>No Credit Card Required</p>
                     </div>
                     <div class="col text-center">
-                        <img src="{%static 'img/how/how2.png'%}" alt="">
+                        <img src="{% static 'img/how/how2.png' %}" alt="">
                         <h1>Bid</h1>
                         <p>Bidding is free Only pay if you win</p>
                     </div>
                     <div class="col text-center">
-                        <img src="{%static 'img/how/how3.png'%}" alt="">
+                        <img src="{% static 'img/how/how3.png' %}" alt="">
                         <h1>Win</h1>
                         <p>Fun - Excitement - Great deals</p>
                     </div>
@@ -834,11 +802,12 @@
                 <div class="col ">
                     <div class="card box-shadow" style="width: 18rem;border-radius:15px">
                         <div class="card-body" style="border-bottom: 1px solid rgba(146, 143, 143, .3)">
-                          <p class="card-text">I came I saw I won. Love what I have won, and will try to won something else</p>
+                            <p class="card-text">I came I saw I won. Love what I have won, and will try to won something
+                                else</p>
                         </div>
                         <div class="row text-center">
                             <div class="col-4 p-3">
-                                <img src="{%static 'img/client/client01.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'img/client/client01.png' %}" class="card-img-top" alt="...">
                             </div>
                             <div class="col-8 d-flex justify-content-center align-items-center">
                                 <div>
@@ -853,16 +822,17 @@
                                 </div>
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="col ">
                     <div class="card box-shadow" style="width: 18rem;border-radius:15px">
                         <div class="card-body" style="border-bottom: 1px solid rgba(146, 143, 143, .3)">
-                          <p class="card-text">I came I saw I won. Love what I have won, and will try to won something else</p>
+                            <p class="card-text">I came I saw I won. Love what I have won, and will try to won something
+                                else</p>
                         </div>
                         <div class="row text-center">
                             <div class="col-4 p-3">
-                                <img src="{%static 'img/client/client01.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'img/client/client01.png' %}" class="card-img-top" alt="...">
                             </div>
                             <div class="col-8 d-flex justify-content-center align-items-center">
                                 <div>
@@ -877,16 +847,17 @@
                                 </div>
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="col ">
                     <div class="card box-shadow" style="width: 18rem;border-radius:15px">
                         <div class="card-body" style="border-bottom: 1px solid rgba(146, 143, 143, .3)">
-                          <p class="card-text">I came I saw I won. Love what I have won, and will try to won something else</p>
+                            <p class="card-text">I came I saw I won. Love what I have won, and will try to won something
+                                else</p>
                         </div>
                         <div class="row text-center">
                             <div class="col-4 p-3">
-                                <img src="{%static 'img/client/client01.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'img/client/client01.png' %}" class="card-img-top" alt="...">
                             </div>
                             <div class="col-8 d-flex justify-content-center align-items-center">
                                 <div>
@@ -901,19 +872,19 @@
                                 </div>
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <br><br><br>
     {% comment %} newsletter {% endcomment %}
-    <div style="background-image: url({%static 'img/footer/footer-top-shape.png'%});background-repeat: no-repeat;background-size: cover;">
+    <div style="background-image: url({% static 'img/footer/footer-top-shape.png' %});background-repeat: no-repeat;background-size: cover;">
 
         <div class="container box-shadow rounds-test">
             <div class="row m-5">
                 <div class="col">
-                    <img src="{%static 'img/footer/newslater.png'%}" alt="">
+                    <img src="{% static 'img/footer/newslater.png' %}" alt="">
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
                     <div>
@@ -922,17 +893,19 @@
                         <div class="d-flex">
                             <nav class="navbar navbar-light bg-light">
                                 <form class="form-inline">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Enter your email" aria-label="Search">
-                                
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Enter your email"
+                                           aria-label="Search">
+
                                 </form>
                             </nav>
-                            <input type="button" value="Subscribe" class="btn btn-primary "style="border-radius:30px; height:40px;margin-top:8px">
+                            <input type="button" value="Subscribe" class="btn btn-primary "
+                                   style="border-radius:30px; height:40px;margin-top:8px">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-{% endblock  %}
+{% endblock %}
 </body>
 </html>
