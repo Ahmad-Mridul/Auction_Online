@@ -6,20 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .bg-topheader{
-            background-image: url({%static 'img/banner/banner-bg-1.png'%});
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-radius:0 0 7rem 7rem; 
-            height:800px
-        }
-        .main-header{
-            position: sticky;
-            top:0;
-            background: linear-gradient(90deg, rgba(68,45,185,1) 86%, rgba(138,125,208,1) 100%);
-        }
-    </style>
 </head>
 <body>
     <div class="bg-topheader">
@@ -45,7 +31,7 @@
                 </div>
                 <div class="col">
                     <ul class='d-flex text-white' style='list-style-type: none;'>
-                         <a href="{% url 'index' %}" style="text-decoration: none" class="text-white"><li class='m-3 fs-4'>Home</li></a>
+                        <a href="{% url 'index' %}" style="text-decoration: none" class="text-white"><li class='m-3 fs-4'>Home</li></a>
                         <a href="{% url 'about' %}" style="text-decoration: none" class="text-white"><li class='m-3 fs-4'>About</li></a>
                         <a href="{% url 'contact' %}" style="text-decoration: none" class="text-white"><li class='m-3 fs-4'>Contact</li></a>
                         <li class='m-3 fs-4'>Auction</li>
@@ -53,20 +39,6 @@
                 </div>
               </div>
         </div>
-        {% comment %} banner part {% endcomment %}
-        <div class="container">
-            <div class="row">
-              <div class="col mt-5">
-                <h4 class="text-warning">Next Generation Auction</h4>
-                <h1 class='text-white'>Find Your <br> Next Deal!</h1>
-                <p class='text-white'>Online Auction is where everyone goes to shop, sell,and give, while discovering variety and affordability.</p>
-                <button type="button" class="btn btn-warning" style="width:200px;border-radius:20px">Get Started</button>
-              </div>
-              <div class="col">
-                <img src="{% static 'img/banner/banner-1.png'%}" height="75%" alt="">
-              </div>
-            </div>
-          </div>
     </div>
 </body>
 </html>

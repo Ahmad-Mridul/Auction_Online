@@ -4,17 +4,20 @@ from Core.models import *
 
 
 def index(request):
-
-    productData=Product.objects.all()
+    productData = Product.objects.all()
     categorysData = Categories.objects.all()
 
     context = {
         'categorys': categorysData,
-        'products':productData
+        'products': productData
     }
 
-    return render(request, 'index.html',context)
+    return render(request, 'index.html', context)
 
 
 def about(request):
     return render(request, 'about.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')
