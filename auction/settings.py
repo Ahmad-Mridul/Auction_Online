@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'index',
     'Core',
     'static',
-    # 'jazzmin'
+    'jazzmin'
 ]
 
 MIDDLEWARE = [
