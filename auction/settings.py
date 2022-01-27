@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'index',
     'Core',
+    'static',
+    # 'jazzmin'
 ]
 
 MIDDLEWARE = [
