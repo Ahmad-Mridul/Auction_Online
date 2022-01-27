@@ -28,8 +28,10 @@
                 </div>
             </div>
             {% endfor %}
+        </div>
+    </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
 
 
     {% comment %} Vehicles section {% endcomment %}
@@ -47,8 +49,6 @@
     <div class="container">
     <div class="row">
         <div class="col">
-
-            {% if Product.category == Vehicles %}
                 {% for n in Product %}
                     <div class="card rounded p-2 box-shadow card-style">
                         <img src="{{ n.p_img.url }}" alt="">
@@ -76,12 +76,11 @@
                         <button class="btn btn-primary btop text-white">Bid Now</button>
                     </div>
                 {% endfor %}
-            {% endif %}
 
         </div>
 
-
-    </div> <br><br><br>
+    </div>
+    <br><br><br>
 
     {% comment %} jewelry section{% endcomment %}
     <div class='container d-flex'>
